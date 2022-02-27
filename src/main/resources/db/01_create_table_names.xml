@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+    <changeSet id="01-1" author="piastkar">
+        <createTable tableName="names_first_part">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR2(20)"/>
+            <column name="gender" type="ENUM('MALE','FEMALE',  'BOTH')"/>
+            <column name="race" type="ENUM('HUMAN','HALFLING','DWARF','ELF')"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="02-1" author="piastkar">
+        <createTable tableName="names_second_part">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR2(20)"/>
+            <column name="gender" type="ENUM('MALE','FEMALE',  'BOTH')"/>
+            <column name="race" type="ENUM('HUMAN','HALFLING','DWARF','ELF')"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="03-1" author="piastkar">
+        <createTable tableName="nicknames">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="nickname" type="VARCHAR2(40)"/>
+            <column name="race" type="ENUM('HUMAN','HALFLING','DWARF','ELF')"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="04-1" author="piastkar">
+        <createTable tableName="connectors">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="connector" type="VARCHAR2(40)"/>
+            <column name="race" type="ENUM('HUMAN','HALFLING','DWARF','ELF')"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

@@ -13,4 +13,11 @@ public enum Gender {
         this.description = description;
     }
 
+    public int getOption() {
+        return option;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }

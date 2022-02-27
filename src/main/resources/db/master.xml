@@ -4,6 +4,21 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
-    <include file="01_create_table_human_names.xml" relativeToChangelogFile="true"/>
-    <include file="data/01_elf_male_names.sql" relativeToChangelogFile="true"/>
+    <include file="01_create_table_names.xml" relativeToChangelogFile="true"/>
+    <include file="data/01_elf_both_names.sql" relativeToChangelogFile="true"/>
+    <include file="data/02_elf_male_names_2part.sql" relativeToChangelogFile="true"/>
+    <include file="data/03_halfling_both_names.sql" relativeToChangelogFile="true"/>
+    <include file="data/04_halfling_female_names_2part.sql" relativeToChangelogFile="true"/>
+    <include file="data/05_halfling_male_names_2part.sql" relativeToChangelogFile="true"/>
+    <include file="data/06_halfling_nickname.sql" relativeToChangelogFile="true"/>
+    <include file="data/07_elf_nicknames.sql" relativeToChangelogFile="true"/>
+    <include file="data/08_human_nicknames.sql" relativeToChangelogFile="true"/>
+    <include file="data/09_human_female_names.sql" relativeToChangelogFile="true"/>
+    <include file="data/10_human_male_names.sql" relativeToChangelogFile="true"/>
+    <include file="data/11_dwarf_both_names.sql" relativeToChangelogFile="true"/>
+    <include file="data/12_dwarf_female_names_2part.sql" relativeToChangelogFile="true"/>
+    <include file="data/13_dwarf_male_names_2part.sql" relativeToChangelogFile="true"/>
+    <include file="data/14_elf_female_names_2part.sql" relativeToChangelogFile="true"/>
+    <include file="data/15_elf_connectors.sql" relativeToChangelogFile="true"/>
+    <include file="data/16_dwarf_empty_nicknames.sql" relativeToChangelogFile="true"/>
 </databaseChangeLog>
