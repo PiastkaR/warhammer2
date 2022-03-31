@@ -1,0 +1,32 @@
+container {
+background: rgba(245,175,80,0.66);
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  margin: 1rem 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #fec356;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #fec356;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+h1, label {
+  color: #fec356;
+  font-family: Arial;
+  font-weight: lighter;
+  font: bold;
+}

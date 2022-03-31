@@ -19,7 +19,7 @@ public class HomeController {
         this.nameService = nameService;
     }
 
-    @GetMapping(path = "/heroName")
+    @GetMapping(path = "/hero")
     public FullName generateHeroDescription(@RequestParam String race, @RequestParam String gender) {
         return nameService.generateName(Race.valueOf(race), Gender.valueOf(gender));
     }

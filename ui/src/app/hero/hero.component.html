@@ -1,0 +1,100 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Hero Form</h1>
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+      <div class="form-group">
+        <label for="name">Player's Name</label>
+        <input type="text" class="form-control" id="name"
+               required
+               [(ngModel)]="model.name" name="name"
+               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+             class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select class="form-control" id="gender" required>
+          <option *ngFor="let gen of genders" [value]="gen">{{gen}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="race">Race</label>
+        <select class="form-control" id="race" required>
+          <option *ngFor="let rac of races" [value]="rac">{{rac}}</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+<!--      <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Hero</button>-->
+    </form>
+  </div>
+</div>
+<div [hidden]="!submitted">
+  <h2>Your hero's name:</h2>
+  <div class="row">
+    <div class="col-xs-3">Name</div>
+    <div class="col-xs-9">{{ model.name }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Race</div>
+    <div class="col-xs-9">{{ model.race }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Gender</div>
+    <div class="col-xs-9">{{ model.gender }}</div>
+  </div>
+  <br>
+  <button type="button" class="btn btn-primary" (click)="submitted=false">Edit</button>
+</div>
+<!--<div id="container">-->
+<!--  <h1>Select your race and gender:</h1>-->
+<!--  <form action="#" method="get">-->
+<!--    <p>-->
+<!--      <label for="race">Choose Your race:</label>-->
+<!--      <input list="race" name="race">-->
+<!--      <datalist id="race">-->
+<!--        <option value="HUMAN">-->
+<!--        <option value="DWARF">-->
+<!--        <option value="ELF">-->
+<!--        <option value="HALFLING">-->
+<!--      </datalist>-->
+
+<!--      <label for="gender">Choose Your gender:</label>-->
+<!--      <input list="gender" name="gender">-->
+<!--      <datalist id="gender">-->
+<!--        <option value="MALE">-->
+<!--        <option value="FEMALE">-->
+<!--      </datalist>-->
+
+<!--      <label for="charactersClass">Choose Your class:</label>-->
+<!--      <input list="charactersClass" name="charactersClass">-->
+<!--      <datalist id="charactersClass">-->
+<!--        <option value="SCHOLAR">-->
+<!--        <option value="COMMONER">-->
+<!--        <option value="RANGER">-->
+<!--        <option value="CRIMINAL">-->
+<!--        <option value="WARRIOR">-->
+<!--      </datalist>-->
+
+<!--      <label for="gender">Input your name:</label>-->
+<!--      <input name="userName" placeholder="your name"/><br/>-->
+<!--    </p>-->
+<!--    <input type="submit" value="GENERATE!"/>-->
+<!--  </form>-->
+
+<!--  <div>-->
+<!--    <a class="fandom-image">-->
+<!--      <img src="http://localhost:8080/Warhammer_Button_Dwarf.webp" width="80" height="80">-->
+<!--    </a>-->
+<!--    <a class="fandom-image">-->
+<!--      <img src="http://localhost:8080/Warhammer_Button_Bretonnia.webp" width="80" height="80">-->
+<!--    </a>-->
+<!--    <a class="fandom-image">-->
+<!--      <img src="http://localhost:8080/Warhammer_Button_High_Elves.webp" width="80" height="80">-->
+<!--    </a>-->
+<!--  </div>-->
+<!--</div>-->
