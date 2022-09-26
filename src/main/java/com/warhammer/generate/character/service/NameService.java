@@ -3,10 +3,10 @@ package com.warhammer.generate.character.service;
 import com.warhammer.generate.character.model.description.Gender;
 import com.warhammer.generate.character.model.description.Race;
 import com.warhammer.generate.character.model.name.*;
-import com.warhammer.generate.character.repository.hero.name.NameConnectorRepository;
-import com.warhammer.generate.character.repository.hero.name.NameRepository;
-import com.warhammer.generate.character.repository.hero.name.NicknameRepository;
-import com.warhammer.generate.character.repository.hero.name.SecondPartOfNameRepository;
+import com.warhammer.generate.character.repository.name.NameConnectorRepository;
+import com.warhammer.generate.character.repository.name.NameRepository;
+import com.warhammer.generate.character.repository.name.NicknameRepository;
+import com.warhammer.generate.character.repository.name.SecondPartOfNameRepository;
 import com.warhammer.generate.character.utils.mechanics.MechanicsUtils;
 import org.springframework.stereotype.Service;
 

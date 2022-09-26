@@ -1,0 +1,18 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+    <changeSet id="01-1" author="piastkar">
+        <createTable tableName="profession">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="profession" type="VARCHAR2(100)"/>
+<!--            <column name="main_characteristics_id" type="BIGINT"/>-->
+            <column name="character_class" type="ENUM('SCHOLAR','COMMONER','CRIMINAL','WARRIOR', 'RANGER')"/>
+<!--            <column name="main_characteristics" type="VARCHAR2(100)"/>-->
+<!--            <column name="race" type="VARCHAR2(100)"/>-->
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

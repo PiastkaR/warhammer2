@@ -1,4 +1,4 @@
-package com.warhammer.generate.character.repository.hero.name;
+package com.warhammer.generate.character.repository.name;
 
 import com.warhammer.generate.character.model.name.NameConnector;
 import org.springframework.data.repository.CrudRepository;

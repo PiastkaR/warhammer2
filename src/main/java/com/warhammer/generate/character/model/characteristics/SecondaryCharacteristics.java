@@ -1,15 +1,34 @@
 package com.warhammer.generate.character.model.characteristics;
 
-public class SecondaryCharacteristics {
+import javax.persistence.*;
+import java.io.Serializable;
 
-    private final int attacks;
-    private final int vitality;
-    private final int strength;
-    private final int durability;
-    private final int speed;
-    private final int magic;
-    private final int insanityPoints;
-    private final int destinyPoints;
+@Entity(name = "secondary_characteristics")
+public class SecondaryCharacteristics implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
+    private Long id;
+    @Column(nullable = true)
+    private int attacks;
+    @Column(nullable = true)
+    private int vitality;
+    @Column(nullable = true)
+    private int strength;
+    @Column(nullable = true)
+    private int durability;
+    @Column(nullable = true)
+    private int speed;
+    @Column(nullable = true)
+    private int magic;
+    @Column(nullable = true)
+    private int insanityPoints;
+    @Column(nullable = true)
+    private int destinyPoints;
+
+    public SecondaryCharacteristics() {
+    }
 
     public SecondaryCharacteristics(int attacks, int vitality, int strength, int durability, int speed, int magic, int insanityPoints, int destinyPoints) {
         this.attacks = attacks;

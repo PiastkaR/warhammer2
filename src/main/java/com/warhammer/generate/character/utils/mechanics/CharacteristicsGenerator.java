@@ -1,13 +1,16 @@
 package com.warhammer.generate.character.utils.mechanics;
 
-import com.warhammer.generate.character.model.characteristics.DestinyPointsGenerator;
 import com.warhammer.generate.character.model.characteristics.MainCharacteristics;
 import com.warhammer.generate.character.model.characteristics.SecondaryCharacteristics;
-import com.warhammer.generate.character.model.characteristics.VitalityGenerator;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CharacteristicsGenerator {
+    private static final int NUMBER_OF_ATTACKS = 1;
+    private static final int LESS_IMPORTANT_POINTS = 0;
+    private static final int DWARF_SPEED = 3;
+    private static final int ELF_SPEED = 5;
+    private static final int HUMAN_SPEED = 4;
 
     private final DiceThrowGenerator diceThrow;
     private final VitalityGenerator vitalityGenerator;
@@ -76,15 +79,15 @@ public class CharacteristicsGenerator {
         int durability = MechanicsUtils.getTensFromDigit(mainCharacteristics.getVim());
 
         return new SecondaryCharacteristics(
-                1,
+                NUMBER_OF_ATTACKS,
                 generateHumanVitality(diceThrow),
                 strength,
                 durability,
-                4,
-                0,
-                0,
+                HUMAN_SPEED,
+                LESS_IMPORTANT_POINTS,
+                LESS_IMPORTANT_POINTS,
                 generateHumanDestinyPoints(diceThrow)
-                );
+        );
     }
 
     public SecondaryCharacteristics generateElfSecondaryCharacteristics(MainCharacteristics mainCharacteristics) {
@@ -92,13 +95,13 @@ public class CharacteristicsGenerator {
         int durability = MechanicsUtils.getTensFromDigit(mainCharacteristics.getVim());
 
         return new SecondaryCharacteristics(
-                1,
+                NUMBER_OF_ATTACKS,
                 generateElfVitality(diceThrow),
                 strength,
                 durability,
-                5,
-                0,
-                0,
+                ELF_SPEED,
+                LESS_IMPORTANT_POINTS,
+                LESS_IMPORTANT_POINTS,
                 generateElfDestinyPoints(diceThrow)
         );
     }
@@ -108,13 +111,13 @@ public class CharacteristicsGenerator {
         int durability = MechanicsUtils.getTensFromDigit(mainCharacteristics.getVim());
 
         return new SecondaryCharacteristics(
-                1,
+                NUMBER_OF_ATTACKS,
                 generateDwarfVitality(diceThrow),
                 strength,
                 durability,
-                3,
-                0,
-                0,
+                DWARF_SPEED,
+                LESS_IMPORTANT_POINTS,
+                LESS_IMPORTANT_POINTS,
                 generateDwarfDestinyPoints(diceThrow)
         );
     }
@@ -124,13 +127,13 @@ public class CharacteristicsGenerator {
         int durability = MechanicsUtils.getTensFromDigit(mainCharacteristics.getVim());
 
         return new SecondaryCharacteristics(
-                1,
+                NUMBER_OF_ATTACKS,
                 generateHalflingVitality(diceThrow),
                 strength,
                 durability,
-                4,
-                0,
-                0,
+                HUMAN_SPEED,
+                LESS_IMPORTANT_POINTS,
+                LESS_IMPORTANT_POINTS,
                 generateHalflingDestinyPoints(diceThrow)
         );
     }

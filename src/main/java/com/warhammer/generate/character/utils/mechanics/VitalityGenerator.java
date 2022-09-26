@@ -1,4 +1,4 @@
-package com.warhammer.generate.character.model.characteristics;
+package com.warhammer.generate.character.utils.mechanics;
 
 import com.warhammer.generate.character.utils.mechanics.MechanicsUtils;
 import org.springframework.stereotype.Component;

@@ -1,0 +1,47 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+    <changeSet id="01-1" author="piastkar">
+        <createTable tableName="main_characteristics">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="combat_skills" type="VARCHAR2(10)"/>
+            <column name="archery_skills" type="VARCHAR2(10)"/>
+            <column name="vim" type="VARCHAR2(10)"/>
+            <column name="hardiness" type="VARCHAR2(10)"/>
+            <column name="agility" type="VARCHAR2(10)"/>
+            <column name="intelligence" type="VARCHAR2(10)"/>
+            <column name="willpower" type="VARCHAR2(10)"/>
+            <column name="polish" type="VARCHAR2(10)"/>
+        </createTable>
+<!--        <addForeignKeyConstraint constraintName="fk_profession2main"-->
+<!--                                 baseTableName="profession"-->
+<!--                                 baseColumnNames="id"-->
+<!--                                 referencedTableName="main_characteristics"-->
+<!--                                 referencedColumnNames="id"/>-->
+
+<!--        <addForeignKeyConstraint constraintName="fk_main2profession"-->
+<!--                                 baseTableName="main_characteristics"-->
+<!--                                 baseColumnNames="id"-->
+<!--                                 referencedTableName="profession"-->
+<!--                                 referencedColumnNames="id"/>-->
+    </changeSet>
+    <changeSet id="02-1" author="piastkar">
+        <createTable tableName="secondary_characteristics">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="attacks" type="INT"/>
+            <column name="vitality" type="INT"/>
+            <column name="strength" type="INT"/>
+            <column name="durability" type="INT"/>
+            <column name="speed" type="INT"/>
+            <column name="magic" type="INT"/>
+            <column name="insanity_points" type="INT"/>
+            <column name="destiny_points" type="INT"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

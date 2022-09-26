@@ -14,7 +14,7 @@ spring:
     show-sql: true
 #  liquibase:
 #    change-log: classpath:db/master.xml
-#    contexts: dev
+#    contexts: dev trzeba dodac conext="dev" w  include plik1.xml + master.xml
 #    enabled: true
 #    drop-first: false
 #    default-schema: public

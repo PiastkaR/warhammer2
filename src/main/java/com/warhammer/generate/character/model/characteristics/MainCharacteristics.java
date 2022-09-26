@@ -1,56 +1,80 @@
 package com.warhammer.generate.character.model.characteristics;
 
-public class MainCharacteristics {
+import javax.persistence.*;
+import java.io.Serializable;
 
-    private final int combatSkills;
-    private final int archerySkills;
-    private final int vim;
-    private final int hardiness;
-    private final int agility;
-    private final int intelligence;
-    private final int willpower;
-    private final int polish;
+@Entity
+@Table(name = "main_characteristics", schema = "public")
+public class MainCharacteristics implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(name = "combat_skills", nullable = true)
+    private String combatSkills;
+    @Column(name = "archery_skills", nullable = true)
+    private String archerySkills;
+    @Column(nullable = true)
+    private String vim;
+    @Column(nullable = true)
+    private String hardiness;
+    @Column(nullable = true)
+    private String agility;
+    @Column(nullable = true)
+    private String intelligence;
+    @Column(nullable = true)
+    private String willpower;
+    @Column(nullable = true)
+    private String polish;
+
+    public MainCharacteristics() {
+    }
 
     public MainCharacteristics(int combatSkills, int archerySkills, int vim, int hardiness, int agility, int intelligence, int willpower, int polish) {
-        this.combatSkills = combatSkills;
-        this.archerySkills = archerySkills;
-        this.vim = vim;
-        this.hardiness = hardiness;
-        this.agility = agility;
-        this.intelligence = intelligence;
-        this.willpower = willpower;
-        this.polish = polish;
+        this.combatSkills = Integer.toString(combatSkills);
+        this.archerySkills = Integer.toString(archerySkills);
+        this.vim = Integer.toString(vim);
+        this.hardiness = Integer.toString(hardiness);
+        this.agility = Integer.toString(agility);
+        this.intelligence = Integer.toString(intelligence);
+        this.willpower = Integer.toString(willpower);
+        this.polish = Integer.toString(polish);
     }
 
     public int getCombatSkills() {
-        return combatSkills;
+        return parseString(combatSkills);
     }
 
     public int getArcherySkills() {
-        return archerySkills;
+        return parseString(archerySkills);
     }
 
     public int getVim() {
-        return vim;
+        return parseString(vim);
     }
 
     public int getHardiness() {
-        return hardiness;
+        return parseString(hardiness);
     }
 
     public int getAgility() {
-        return agility;
+        return parseString(agility);
     }
 
     public int getIntelligence() {
-        return intelligence;
+        return parseString(intelligence);
     }
 
     public int getWillpower() {
-        return willpower;
+        return parseString(willpower);
     }
 
     public int getPolish() {
-        return polish;
+        return parseString(polish);
     }
+
+    private int parseString(String value) {
+        return Integer.parseInt(value);
+    }
+
 }

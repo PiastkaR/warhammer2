@@ -12,8 +12,9 @@ spring:
     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
     defer-datasource-initialization: true
     show-sql: true
+    ddl-auto: create-drop
   liquibase:
-      change-log: classpath:db/master.xml
-#    contexts: dev
+    change-log: classpath:db/master.xml
+    contexts: all
 #http://localhost:8080/h2-console/login.do?jsessionid=7ae7800c86865d07d0c852082eaba78a
 

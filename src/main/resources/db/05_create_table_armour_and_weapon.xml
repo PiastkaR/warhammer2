@@ -1,0 +1,31 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+    <changeSet id="01-1" author="piastkar">
+        <createTable tableName="armour">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR2(100)"/>
+            <column name="load" type="VARCHAR2(20)"/>
+            <column name="location" type="VARCHAR2(20)"/>
+            <column name="defense" type="VARCHAR2(20)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="02-1" author="piastkar">
+        <createTable tableName="weapon">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR2(100)"/>
+            <column name="load" type="VARCHAR2(10)"/>
+            <column name="category" type="VARCHAR2(20)"/>
+            <column name="strength" type="VARCHAR2(20)"/>
+            <column name="range" type="VARCHAR2(20)"/>
+            <column name="reload" type="VARCHAR2(20)"/>
+            <column name="characteristic" type="VARCHAR2(100)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

@@ -4,21 +4,36 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
-    <include file="01_create_table_names.xml" relativeToChangelogFile="true"/>
-    <include file="data/01_elf_both_names.sql" relativeToChangelogFile="true"/>
-    <include file="data/02_elf_male_names_2part.sql" relativeToChangelogFile="true"/>
-    <include file="data/03_halfling_both_names.sql" relativeToChangelogFile="true"/>
-    <include file="data/04_halfling_female_names_2part.sql" relativeToChangelogFile="true"/>
-    <include file="data/05_halfling_male_names_2part.sql" relativeToChangelogFile="true"/>
-    <include file="data/06_halfling_nickname.sql" relativeToChangelogFile="true"/>
-    <include file="data/07_elf_nicknames.sql" relativeToChangelogFile="true"/>
-    <include file="data/08_human_nicknames.sql" relativeToChangelogFile="true"/>
-    <include file="data/09_human_female_names.sql" relativeToChangelogFile="true"/>
-    <include file="data/10_human_male_names.sql" relativeToChangelogFile="true"/>
-    <include file="data/11_dwarf_both_names.sql" relativeToChangelogFile="true"/>
-    <include file="data/12_dwarf_female_names_2part.sql" relativeToChangelogFile="true"/>
-    <include file="data/13_dwarf_male_names_2part.sql" relativeToChangelogFile="true"/>
-    <include file="data/14_elf_female_names_2part.sql" relativeToChangelogFile="true"/>
-    <include file="data/15_elf_connectors.sql" relativeToChangelogFile="true"/>
-    <include file="data/16_dwarf_empty_nicknames.sql" relativeToChangelogFile="true"/>
+    <include file="01_create_table_name.xml" relativeToChangelogFile="true" context="all"/>
+    <include file="data/01_elf_both_names.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/02_elf_male_names_2part.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/03_halfling_both_names.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/04_halfling_female_names_2part.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/05_halfling_male_names_2part.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/06_halfling_nickname.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/07_elf_nicknames.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/08_human_nicknames.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/09_human_female_names.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/10_human_male_names.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/11_dwarf_both_names.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/12_dwarf_female_names_2part.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/13_dwarf_male_names_2part.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/14_elf_female_names_2part.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/15_elf_connectors.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/16_dwarf_empty_nicknames.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="02_create_table_birthplace.xml" relativeToChangelogFile="true" context="all"/>
+    <include file="data/17_birthplaces.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="03_create_table_skill.xml" relativeToChangelogFile="true" context="all"/>
+    <include file="data/18_skills.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="04_create_table_ability.xml" relativeToChangelogFile="true" context="all"/>
+    <include file="data/19_abilities.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="05_create_table_armour_and_weapon.xml" relativeToChangelogFile="true" context="all"/>
+    <include file="data/20_armours.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/21_weapons.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="06_create_table_profession.xml" relativeToChangelogFile="true" context="all"/>
+    <include file="data/22_professions.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="07_create_table_main_and_secondary_characteristic.xml" relativeToChangelogFile="true" context="all"/>
+    <include file="data/23_main_characteristics.sql" relativeToChangelogFile="true" context="all"/>
+    <include file="data/24_secondary_characteristics.sql" relativeToChangelogFile="true" context="all"/>
+
 </databaseChangeLog>

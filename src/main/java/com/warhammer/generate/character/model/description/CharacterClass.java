@@ -1,6 +1,6 @@
 package com.warhammer.generate.character.model.description;
 
-public enum CharactersClass {
+public enum CharacterClass {
     SCHOLAR(0, "Uczeni"),
     COMMONER(1, "Mieszczanie"),
     RANGER(2, "Wędrowcy"),
@@ -10,7 +10,7 @@ public enum CharactersClass {
     private final int option;
     private final String description;
 
-    CharactersClass(int option, String description) {
+    CharacterClass(int option, String description) {
         this.option = option;
         this.description = description;
     }

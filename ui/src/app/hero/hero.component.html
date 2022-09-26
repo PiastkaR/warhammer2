@@ -6,7 +6,7 @@
         <label for="name">Player's Name</label>
         <input type="text" class="form-control" id="name"
                required
-               [(ngModel)]="model.name" name="name"
+               [(ngModel)]="hero.name" name="name"
                #name="ngModel">
         <div [hidden]="name.valid || name.pristine"
              class="alert alert-danger">
@@ -37,15 +37,15 @@
   <h2>Your hero's name:</h2>
   <div class="row">
     <div class="col-xs-3">Name</div>
-    <div class="col-xs-9">{{ model.name }}</div>
+    <div class="col-xs-9">{{ hero.name }}</div>
   </div>
   <div class="row">
     <div class="col-xs-3">Race</div>
-    <div class="col-xs-9">{{ model.race }}</div>
+    <div class="col-xs-9">{{ hero.race }}</div>
   </div>
   <div class="row">
     <div class="col-xs-3">Gender</div>
-    <div class="col-xs-9">{{ model.gender }}</div>
+    <div class="col-xs-9">{{ hero.gender }}</div>
   </div>
   <br>
   <button type="button" class="btn btn-primary" (click)="submitted=false">Edit</button>
